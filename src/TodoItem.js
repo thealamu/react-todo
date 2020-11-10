@@ -3,7 +3,12 @@ import './TodoItem.css'
 
 export default function TodoItem(props) {
 	function toggled(e) {
-		console.log("Toggled")
+		console.log(props.model, "toggled")
+		props.onChange({
+			id: props.model.id,
+			content: props.model.content,
+			done: !props.model.done
+		})
 	}
 
 	return (

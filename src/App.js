@@ -21,7 +21,19 @@ class App extends React.Component {
   }
 
   onTodoChanged = (todoItem) => {
-	console.log("Todo Changed:", todoItem)
+	 this.setState(state => {
+		 let itemIndx
+		 state.todos.forEach((item, indx) => {
+			 if (item.id === todoItem.id) {
+				 console.log(indx)
+				 itemIndx = indx
+				 return
+			 }
+		 })
+
+		 state.todos[itemIndx] = todoItem
+	     return {todos: state.todos}	
+	 })
   }
 
   render() {
