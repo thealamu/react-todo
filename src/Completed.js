@@ -8,7 +8,7 @@ export default function Completed(props) {
 	done.forEach(item => {
 		items.push(
 			<>
-				<TodoItem model={item} />			
+				<TodoItem model={item} onChange={props.onChange}/>			
 			</>
 		)}
 	)

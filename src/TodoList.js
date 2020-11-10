@@ -8,7 +8,7 @@ export default function TodoList(props) {
 	undone.forEach(item => {
 		items.push(
 			<>
-				<TodoItem model={item} />			
+				<TodoItem model={item} onChange={props.onChange}/>			
 			</>
 		)}
 	)

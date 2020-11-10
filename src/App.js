@@ -15,11 +15,13 @@ class App extends React.Component {
   }
 
   addEntry = (todoItem) => {
-	console.log(todoItem)
-
 	this.setState(state => (
 		{todos: state.todos.concat(todoItem)}
 	))
+  }
+
+  onTodoChanged = (todoItem) => {
+	console.log("Todo Changed:", todoItem)
   }
 
   render() {
@@ -27,8 +29,8 @@ class App extends React.Component {
 		<div className="App">
 		  <h1>Todo App</h1>
 		  <Entry onAddEntry={this.addEntry} />
-		  <TodoList todos={this.state.todos} />
-		  <Completed todos={this.state.todos} />
+		  <TodoList todos={this.state.todos} onChange={this.onTodoChanged}/>
+		  <Completed todos={this.state.todos} onChange={this.onTodoChanged}/>
 		</div>
 	  );
   }
