@@ -15,8 +15,15 @@ export default class Entry extends React.Component {
 		})
 	}
 
+	idgen = () => {
+	  return Math.floor((1 + Math.random()) * 0x10000)
+	      .toString(16)
+	      .substring(1);
+	}
+
 	addEntry = () => {
 		let todoItem = {
+			id: this.idgen(),
 			content: this.state.entryText,
 			done: false
 		}
