@@ -1,4 +1,6 @@
 import React from 'react'
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export default class Entry extends React.Component {
 	constructor(props) {
@@ -36,9 +38,11 @@ export default class Entry extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<input onChange={this.updateState} value={this.state.entryText} type="text"/>
-				<button onClick={this.addEntry}>Add</button>
+			<div style={{verticalAlign: "middle"}}>
+				<TextField onChange={this.updateState} value={this.state.entryText} label="What to do" variant="outlined" size="small"/> 
+				<Button style={{marginLeft: "8px", marginTop: "4px"}} onClick={this.addEntry} variant="outlined" color="primary" size="small" disableElevation>
+				  Add
+				</Button>
 			</div>
 		)
 	}
