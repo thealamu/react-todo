@@ -22,6 +22,9 @@ export default class Entry extends React.Component {
 		}
 
 		this.props.onAddEntry(todoItem)
+		this.setState({
+			entryText: ""
+		})
 	}
 
 	render() {
