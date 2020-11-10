@@ -10,7 +10,7 @@ export default function Completed(props) {
 
 	return (
 		<>
-			<h6>Completed</h6>
+			{ items.length !== 0 && <h6>Completed</h6> }
 			<div id="hc">
 				<List>{items}</List>
 			</div>
