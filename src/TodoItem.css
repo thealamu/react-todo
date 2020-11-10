@@ -1,0 +1,16 @@
+#todoitem {
+	text-align: center;
+	margin-top: 8px;
+}
+
+#checker {
+	display: inline
+}
+
+#content {
+	display: inline
+}
+
+#clearer {
+	clear: both
+}
