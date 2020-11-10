@@ -2,6 +2,8 @@ import './App.css';
 import Entry from './Entry.js';
 import React from 'react';
 import TodoList from './TodoList.js'
+import Completed from './Completed.js'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -25,7 +27,8 @@ class App extends React.Component {
 		<div className="App">
 		  <h1>Todo App</h1>
 		  <Entry onAddEntry={this.addEntry} />
-		  <TodoList todos={this.state.todos}/>
+		  <TodoList todos={this.state.todos} />
+		  <Completed todos={this.state.todos} />
 		</div>
 	  );
   }
